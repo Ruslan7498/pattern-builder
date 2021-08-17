@@ -29,12 +29,6 @@ public class Person {
         this.surname = personBuilder.getSurnameame();
         this.age = personBuilder.getAge();
         this.address = personBuilder.getAddress();
-        if (this.name == null || this.surname == null) {
-            throw new IllegalArgumentException("Name or surname not entered");
-        }
-        if (this.age.getAsInt() < 0) {
-            throw new IllegalArgumentException("Wrong age");
-        }
     }
 
     public boolean hasAge() {

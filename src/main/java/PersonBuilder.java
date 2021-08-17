@@ -43,6 +43,12 @@ public class PersonBuilder {
     }
 
     public Person build() {
+        if (this.name == null || this.surname == null) {
+            throw new IllegalArgumentException("Name or surname not entered");
+        }
+        if (this.age.getAsInt() < 0) {
+            throw new IllegalArgumentException("Wrong age");
+        }
         return new Person(this);
     }
 }
